@@ -1,0 +1,160 @@
+*{
+	padding:0;
+	margin:0;
+}
+ul,
+li{
+	list-style: none;
+}
+html,body{
+	height: 100%;
+	overflow: hidden;
+}
+#container,
+.sections,
+.section{
+	width:100%;
+	height: 100%;
+}
+.sections{
+	position: relative;
+}
+.section{
+	position: relative;
+}
+.section img{
+	display: block;
+	width:100%;
+}
+.section h3{
+	width:100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-align: center;
+}
+
+#section0,
+#section1,
+#section2,
+#section3{
+	background-color: #000;
+	background-size:cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: snow;
+}
+#section0{
+	background-image: url(../img/img1.jpg);
+}
+#section0 .title{
+	-webkit-transform:translateX(-100%);
+	transform:translateX(-100%);
+	-webkit-animation:sectitle0 1s ease-in-out 100ms forwards;
+	animation:sectitle0 1s ease-in-out 100ms forwards;
+}
+#section0 p{
+	-webkit-transform:translateX(100%);
+	transform:translateX(100%);
+	-weibkit-animation:sec0 1s ease-in-out 100ms forwards;
+	animation:sec0 1s ease-in-out 100ms forwards;
+}
+@-webkit-keyframes sectitle0{
+	0%{
+		-webkit-transform:translateX(-100%);		
+	}
+	100%{
+		-webkit-transform:translateX(0);
+	}
+}
+@keyframes sectitle0{
+	0%{	
+		transform:translateX(-100%);
+	}
+	100%{
+		transform:translateX(0);
+	}
+}
+@-webkit-keyframes sec0{
+	0%{
+		-webkit-transform:translateX(100%);		
+	}
+	100%{
+		-webkit-transform:translateX(0);
+	}
+}
+@keyframes sec0{
+	0%{	
+		transform:translateX(100%);
+	}
+	100%{
+		transform:translateX(0);
+	}
+}
+.slide{
+	transform:translateX(0);
+	transition:all ease-in-out 500ms;
+}
+#section1{
+	background-image: url(../img/img2.jpg);
+}
+#section2{
+	background-image: url(../img/img3.jpg);
+}
+#section3{
+	background-image: url(../img/img4.jpg);
+}
+.left{
+	float:left;
+	width: 25%;
+}
+h1{
+	font-size: 6em;
+	font-weight: normal;
+	transform:translateX(-100%);
+}
+p{
+	font-size: 2em;
+	margin: 0.5em 0 2em;
+}
+.intro{
+	position: absolute;
+	top: 50%;
+	width:100%;
+	-webkit-transform:translateY(-50%);
+	transform:translateY(-50%);
+	text-align: center;
+}
+.pages{
+	position:fixed;
+	list-style: none;
+}
+.vertical.pages{
+	right: 10px;
+	top: 50%;
+}
+.horizontal.pages{
+	left: 50%;
+	bottom: 10px;
+}
+.pages li{
+	width:10px;
+	height: 10px;
+	margin: 10px 5px;
+	border-radius: 50%;
+	background-color: #fff;
+	border:1px solid #fff;
+	cursor: pointer;
+}
+.horizontal.pages li{
+	display: inline-block;
+	vertical-align: middle;
+}
+.pages li.active{
+	width:14px;
+	height: 14px;
+	border:2px solid #f60;
+	background: none;
+	margin-left: 0;
+}
