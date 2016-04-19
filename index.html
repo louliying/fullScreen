@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Full screen</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery_1_8_3.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
+</head>
+<body>
+	<div id="container" data-PageSwitch>
+		<div class="sections">
+			<div class="section" id="section0">
+				<h3>This is Page1</h3>
+			</div>
+			<div class="section" id="section1">
+				<h3>This is Page2</h3>
+			</div>
+			<div class="section" id="section2">
+				<h3>This is Page3</h3>
+			</div>
+			<div class="section" id="section3">
+				<h3>This is Page4</h3>
+			</div>
+		</div>
+	</div>
+	<script>
+		//$(".sections").PageSwitch();
+		$(function(){
+			$("[data-PageSwitch]").PageSwitch({
+				index:4,
+				easing:"linear",
+				duration:800,
+				loop:true,
+				pagination:true,
+				direction:"horizontal",  //horizontal  vertical
+				callback:function(){
+					
+				}
+			});
+		})
+	</script>
+</body>
+</html>
